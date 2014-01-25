@@ -57,7 +57,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/fstab.qcom:root/fstab.qcom \
     $(LOCAL_PATH)/init.target.rc:root/init.target.rc \
-    $(LOCAL_PATH)/mount_pds.sh:system/bin/mount_pds.sh
+    $(LOCAL_PATH)/mount_pds.sh:system/bin/mount_pds.sh \
+    $(LOCAL_PATH)/ueventd.qcom.rc:root/ueventd.qcom.rc \
 
 # Wifi
 PRODUCT_COPY_FILES += \
