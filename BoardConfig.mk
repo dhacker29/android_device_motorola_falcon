@@ -26,6 +26,7 @@ BOARD_VENDOR := motorola-qcom
 # Falcon specific items
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno305
+TARGET_USES_MOTOROLA_LOG :=true
 BOARD_USES_QCNE := false
 
 # Kernel
