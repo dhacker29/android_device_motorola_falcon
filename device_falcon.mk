@@ -64,6 +64,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/qcom/msm8226/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
+# World APN list
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/apns-conf.xml:system/etc/apns-conf.xml
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.fm_max_volume=4096 \
