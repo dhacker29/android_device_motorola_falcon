@@ -13,6 +13,7 @@ case $radio in
 	"0x6") # Retail US
 	    setprop persist.radio.multisim.config ""
 	    setprop ro.mot.build.customerid retusa_aws
+		;;
 	*) # All others
 		setprop persist.radio.multisim.config ""
 		setprop ro.mot.build.customerid RTGB
