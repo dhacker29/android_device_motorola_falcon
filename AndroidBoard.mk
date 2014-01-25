@@ -6,7 +6,7 @@ LOCAL_PATH := $(call my-dir)
 #----------------------------------------------------------------------
 # Compile Linux Kernel
 #----------------------------------------------------------------------
-KERNEL_DEFCONFIG := msm8226_mmi_defconfig
+KERNEL_DEFCONFIG := msm8226_caf_defconfig
 
 #----------------------------------------------------------------------
 # Copy additional target-specific files
