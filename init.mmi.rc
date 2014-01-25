@@ -271,7 +271,7 @@ service aplogd /system/bin/aplogd
 
 service mmi-radio-sh /system/bin/sh /init.mmi.radio.sh
     class core
-    user radio
+    user root
     group radio
     oneshot
 
