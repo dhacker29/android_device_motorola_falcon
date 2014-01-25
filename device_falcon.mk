@@ -42,9 +42,7 @@ PRODUCT_PACKAGES += \
 # Misc
 PRODUCT_PACKAGES += \
     Launcher3 \
-    libemoji \
-    Superuser \
-    su
+    libemoji
 
 # Ramdisk
 PRODUCT_PACKAGES += \
