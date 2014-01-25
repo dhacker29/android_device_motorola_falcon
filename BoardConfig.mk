@@ -26,6 +26,7 @@ BOARD_VENDOR := motorola-qcom
 # Falcon specific items
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno305
+BOARD_USES_QCNE := false
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 vmalloc=400M utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags androidboot.write_protect=0 zcache androidboot.selinux=permissive

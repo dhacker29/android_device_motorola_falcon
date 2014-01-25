@@ -24,7 +24,7 @@ ro.telephony.default_network=5
 #
 # system props for the cne module
 #
-persist.cne.feature=1
+persist.cne.feature=0
 
 
 # Skip /sys/power/wait_for_fb_* nodes and
