@@ -40,6 +40,7 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00A00000
 
 LOCAL_PATH := device/motorola/falcon
 
+TARGET_SPECIFIC_HEADER_PATH += $(LOCAL_PATH)/include
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := xt1031,xt1032,xt1033,xt1034,falcon_umts,falcon_umtsds,falcon_cdma,falcon_retuaws,falcon
