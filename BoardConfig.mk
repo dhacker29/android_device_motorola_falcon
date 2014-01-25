@@ -64,3 +64,11 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/fstab.qcom
 
 # userdata 8GB
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 8589934592
+
+
+# SELinux
+BOARD_SEPOLICY_DIRS += \
+	device/motorola/falcon/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    fs_use
