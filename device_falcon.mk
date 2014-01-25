@@ -82,16 +82,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.gps.qc_nlp_in_use=0 \
     qcom.bt.le_dev_pwr_class=1 \
     ro.sf.lcd_density=320 \
+    persist.sys.usb.config=mtp,adb \
     ro.crypto.fuse_sdcard=true
 
 # Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
-	persist.radio.call_type=1 \
-	persist.radio.no_wait_for_card=1 \
-	persist.radio.dfr_mode_set=1 \
+    persist.radio.call_type=1 \
+    persist.radio.no_wait_for_card=1 \
+    persist.radio.dfr_mode_set=1 \
     persist.sys.ssr.restart_level=3 \
-	persist.sys.qc.sub.rdump.on=1 \
-	ro.config.vc_call_vol_steps=7 \
-	ro.use_data_netmgrd=true
+    persist.sys.qc.sub.rdump.on=1 \
+    ro.config.vc_call_vol_steps=7 \
+    ro.use_data_netmgrd=true
 
 $(call inherit-product, vendor/motorola/xt1034/xt1034-vendor.mk)
