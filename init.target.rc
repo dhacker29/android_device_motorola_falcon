@@ -64,15 +64,14 @@ on post-fs
 
 
 on boot
-    start imsqmidaemon
-    insmod /system/lib/modules/adsprpc.ko
+#    start imsqmidaemon
     # Enable writing to led blink node from userspace
     chown system system /sys/class/leds/red/blink
     chown system system /sys/class/leds/green/blink
 
 #Start the qcom-system-daemon service
-service qcomsysd /system/bin/qcom-system-daemon
-    class main
+#service qcomsysd /system/bin/qcom-system-daemon
+#    class main
 
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
@@ -95,12 +94,6 @@ service time_daemon /system/bin/time_daemon
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
    user root
    disabled
-
-#start GNSS/Sensor interface daemon
-service gsiff_daemon /system/bin/gsiff_daemon
-   class late_start
-   user system
-   group gps net_raw
 
 service thermal-engine /system/bin/thermal-engine -c /etc/thermal-engine-8226.conf
    class main
@@ -138,30 +131,30 @@ service adsprpcd /system/bin/adsprpcd
    user media
    group media
 
-service imsqmidaemon /system/bin/imsqmidaemon
-    class main
-    user system
-    group radio net_raw log qcom_diag
-    disabled
+#service imsqmidaemon /system/bin/imsqmidaemon
+#    class main
+#    user system
+#    group radio net_raw log qcom_diag
+#    disabled
 
 # imsdatadaemon starts with root and UID will be downgraded to SYSTEM.
-service imsdatadaemon /system/bin/imsdatadaemon
-    class main
-    user root
-    group system wifi radio net_raw log qcom_diag net_admin
-    disabled
+#service imsdatadaemon /system/bin/imsdatadaemon
+#    class main
+#    user root
+#    group system wifi radio net_raw log qcom_diag net_admin
+#    disabled
 
-on property:sys.ims.QMI_DAEMON_STATUS=1
-    start imsdatadaemon
+#on property:sys.ims.QMI_DAEMON_STATUS=1
+#    start imsdatadaemon
 
-service ims_rtp_daemon /system/bin/ims_rtp_daemon
-   class main
-   user system
-   group radio net_raw diag qcom_diag log
-   disabled
+#service ims_rtp_daemon /system/bin/ims_rtp_daemon
+#   class main
+#   user system
+#   group radio net_raw diag qcom_diag log
+#   disabled
 
-on property:sys.ims.DATA_DAEMON_STATUS=1
-    start ims_rtp_daemon
+#on property:sys.ims.DATA_DAEMON_STATUS=1
+#    start ims_rtp_daemon
 
 service wcnss-service /system/bin/wcnss_service
    class late_start
