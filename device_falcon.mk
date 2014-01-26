@@ -66,6 +66,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/apns-conf.xml:system/etc/apns-conf.xml
 
+# Audio
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.audio.fluence.mode=endfire \
+    persist.audio.handset.mic=digital
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.fm_max_volume=4096 \
