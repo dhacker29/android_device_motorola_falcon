@@ -47,6 +47,7 @@ TARGET_SPECIFIC_HEADER_PATH += $(LOCAL_PATH)/include
 TARGET_OTA_ASSERT_DEVICE := xt1031,xt1032,xt1033,xt1034,falcon_umts,falcon_umtsds,falcon_cdma,falcon_retuaws,falcon
 
 # Audio
+BOARD_USES_CUSTOM_AUDIO_PLATFORM_PATH := device/motorola/falcon/audio
 BOARD_USES_ALSA_AUDIO := true
 AUDIO_FEATURE_DISABLED_SSR := true
 BOARD_HAVE_QCOM_FM := true
