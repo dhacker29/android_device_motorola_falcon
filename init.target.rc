@@ -68,6 +68,8 @@ on boot
     # Enable writing to led blink node from userspace
     chown system system /sys/class/leds/red/blink
     chown system system /sys/class/leds/green/blink
+    # Enable writing to brightness node under torch-light from userspace
+    chown system system /sys/class/leds/torch-light/brightness
 
 #Start the qcom-system-daemon service
 #service qcomsysd /system/bin/qcom-system-daemon
@@ -158,7 +160,7 @@ service adsprpcd /system/bin/adsprpcd
 
 service wcnss-service /system/bin/wcnss_service
    class late_start
-   user root
+   user system
    group system wifi
    oneshot
 
