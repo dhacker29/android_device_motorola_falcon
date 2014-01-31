@@ -20,7 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Audio configuration file
 PRODUCT_COPY_FILES += \
-    device/motorola/falcon/mixer_paths.xml:system/etc/mixer_paths.xml
+    $(LOCAL_PATH)/mixer_paths.xml:system/etc/mixer_paths.xml
 
 $(call inherit-product, device/qcom/msm8226/msm8226.mk)
 
@@ -57,6 +57,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.target.rc:root/init.target.rc \
     $(LOCAL_PATH)/mount_pds.sh:system/bin/mount_pds.sh \
     $(LOCAL_PATH)/ueventd.qcom.rc:root/ueventd.qcom.rc \
+
+# Gps
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/izat.conf:system/etc/izat.conf \
+    $(LOCAL_PATH)/quipc.conf:system/etc/quipc.conf \
+    $(LOCAL_PATH)/xtwifi.conf:system/etc/xtwifi.conf
 
 # Wifi
 PRODUCT_COPY_FILES += \
